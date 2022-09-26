@@ -1,0 +1,24 @@
+.form__list-text {
+  color: #2e5cb8;
+
+  text-decoration-thickness: 2px;
+  text-decoration-color: red;
+}
+
+.form__edit-input {
+  outline: none;
+  border: none;
+  font-size: 17px;
+  width: 90%;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

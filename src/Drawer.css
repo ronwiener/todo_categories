@@ -1,0 +1,15 @@
+.list {
+  background-color: #f2f2f2f2;
+  height: 100vh;
+}
+
+.listItem {
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: darkblue;
+  cursor: pointer;
+}
+.listItem:hover {
+  color: #339966;
+}

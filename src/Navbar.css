@@ -1,0 +1,59 @@
+.grocery {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.grocery:hover {
+  color: #339966;
+}
+
+.costco {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.costco:hover {
+  color: #339966;
+}
+
+.todo {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.todo:hover {
+  color: #339966;
+}
+
+.hardware {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.hardware:hover {
+  color: #339966;
+}
+
+.misc {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.misc:hover {
+  color: #339966;
+}
