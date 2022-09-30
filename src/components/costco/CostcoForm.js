@@ -31,7 +31,7 @@ const CostcoForm = () => {
       });
       setCostcos(costcos);
       console.log(costcos);
-      localStorage.setItem("costcos", JSON.stringify([...costcos, { text }]));
+      localStorage.setItem("costcos", JSON.stringify([...costcos]));
     } else {
       setInputEmpty(true);
     }

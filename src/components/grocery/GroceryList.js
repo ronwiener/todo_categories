@@ -51,7 +51,6 @@ const GroceryList = ({
             <ListItem key={`todo-${UniqKey++}`} role={undefined} dense button>
               <ListItemIcon>
                 <Checkbox
-                  defaultChecked
                   sx={{
                     color: blue[800],
                     "&.Mui-checked": {

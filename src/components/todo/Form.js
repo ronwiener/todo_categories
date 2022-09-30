@@ -32,16 +32,19 @@ const Form = () => {
       console.log("text", text);
       setInputEmpty(true);
     }
-  };
-  */
+  };  */
+
+    //maybe take out the text parameter?
+
     if (text !== "") {
       todos.unshift({
         inx: todos.length + 1,
         isCompleted: false,
         text: text,
       });
+      localStorage.setItem("todos", JSON.stringify([...todos]));
+      setNewTodo(" ");
       setTodos(todos);
-      localStorage.setItem("todos", JSON.stringify([...todos, { text }]));
     } else {
       setInputEmpty(true);
     }
@@ -99,9 +102,11 @@ const Form = () => {
 
   useEffect(() => {
     const json = localStorage.getItem("todos");
+    console.log(json);
     const savedTodos = JSON.parse(json);
     if (savedTodos) {
       setTodos(savedTodos);
+      console.log(savedTodos);
     }
   }, []);
 

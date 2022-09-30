@@ -31,10 +31,7 @@ const HardwareForm = () => {
       });
       setHardwares(hardwares);
       console.log(hardwares);
-      localStorage.setItem(
-        "hardwares",
-        JSON.stringify([...hardwares, { text }])
-      );
+      localStorage.setItem("hardwares", JSON.stringify([...hardwares]));
     } else {
       setInputEmpty(true);
     }

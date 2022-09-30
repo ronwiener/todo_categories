@@ -31,7 +31,7 @@ const MiscForm = () => {
       });
       setMiscs(miscs);
       console.log(miscs);
-      localStorage.setItem("miscs", JSON.stringify([...miscs, { text }]));
+      localStorage.setItem("miscs", JSON.stringify([...miscs]));
     } else {
       setInputEmpty(true);
     }

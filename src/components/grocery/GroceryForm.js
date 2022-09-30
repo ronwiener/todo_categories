@@ -31,10 +31,7 @@ const GroceryForm = () => {
       });
       setGroceries(groceries);
       console.log(groceries);
-      localStorage.setItem(
-        "groceries",
-        JSON.stringify([...groceries, { text }])
-      );
+      localStorage.setItem("groceries", JSON.stringify([...groceries]));
     } else {
       setInputEmpty(true);
     }
