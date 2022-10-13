@@ -12,6 +12,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Button from "@mui/material/Button";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import "../Styles.css";
 
 const TodoList = ({
   todos,
@@ -45,7 +46,17 @@ const TodoList = ({
         {todos.map((todo, inx) => {
           const labelId = `list-todo-${todo}`;
           return (
-            <ListItem key={`todo-${UniqKey++}`} role={undefined} dense button>
+            <ListItem
+              className="listItem"
+              key={`todo-${UniqKey++}`}
+              role={undefined}
+              dense
+              button
+              style={{
+                backgroundColor: "#e0fbfc",
+                boxShadow: "0 0 1px black",
+              }}
+            >
               <ListItemIcon>
                 <Checkbox
                   sx={{
@@ -72,15 +83,18 @@ const TodoList = ({
                     label={labelId}
                     className="form__list-text"
                     primary={`${todo.text}`}
+                    primaryTypographyProps={{ fontSize: "19px" }}
                     style={{
-                      color: "black",
                       opacity: todo.isCompleted ? "0.35" : "bold",
                     }}
                   />
                   <ListItemIcon>
                     <IconButton
                       className="editButton"
-                      style={{ color: "#006600", marginRight: "5px" }}
+                      style={{
+                        color: "#00897b",
+                        marginRight: "5px",
+                      }}
                       edge="end"
                       aria-label="edit"
                       onClick={() => editTodo(inx)}
@@ -107,10 +121,13 @@ const TodoList = ({
                   />
                   <ListItemIcon>
                     <IconButton
+                      className="save"
                       onClick={() => saveTodo(inx)}
                       edge="end"
-                      style={{ color: "#006600" }}
-                      aria-label="delete"
+                      style={{
+                        color: "#00897b",
+                      }}
+                      aria-label="save"
                     >
                       <CheckCircleIcon />
                     </IconButton>

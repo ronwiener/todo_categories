@@ -26,7 +26,7 @@ const HardwareCreator = ({
           ref={inputRef}
           aria-describedby="component-error-text"
           onKeyPress={preventSubmit}
-          style={{ marginTop: "9px" }}
+          style={{ marginTop: "9px", backgroundColor: "white" }}
         />
 
         {!isInputEmpty ? (

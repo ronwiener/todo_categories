@@ -10,7 +10,7 @@ function Hardware() {
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, backgroundColor: "#5fa8d3" }}>
       <Grid container direction="column">
         <Grid item>
           <Typography
@@ -20,6 +20,7 @@ function Hardware() {
               textDecoration: "none",
               letterSpacing: "2px",
               padding: "3px",
+              fontWeight: "700",
             }}
           >
             Hardware List

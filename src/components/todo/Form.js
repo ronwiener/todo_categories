@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+
 import TodoCreator from "./FormInput";
 import TodoList from "./List";
 
@@ -86,7 +87,9 @@ const Form = () => {
   const saveTodo = (inx) => {
     const newTodos = [...todos];
     newTodos[inx].isEditing = !newTodos[inx].isEditing;
+    console.log(newTodos[inx].isEditing);
     newTodos[inx].text = noteRef.current[inx].value;
+    console.log(newTodos[inx].text);
     setTodos(newTodos);
     localStorage.setItem("todos", JSON.stringify(newTodos));
   };
@@ -102,7 +105,6 @@ const Form = () => {
 
   useEffect(() => {
     const json = localStorage.getItem("todos");
-    console.log(json);
     const savedTodos = JSON.parse(json);
     if (savedTodos) {
       setTodos(savedTodos);

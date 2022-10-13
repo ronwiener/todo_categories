@@ -1,14 +1,7 @@
-.form__list-text {
-  color: #2e5cb8;
-
-  text-decoration-thickness: 2px;
-  text-decoration-color: red;
-}
-
 .form__edit-input {
   outline: none;
   border: none;
-  font-size: 17px;
+  font-size: 19px;
   width: 90%;
 }
 
@@ -21,4 +14,23 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.form__list-text {
+  color: black;
+  font-size: 1rem;
+}
+
+.MuiListItemText-primary {
+  color: black;
+  font-size: 1rem;
+}
+
+.editButton {
+  color: #00897b;
+  margin-right: 5px;
+}
+
+.save {
+  color: #00897b;
 }

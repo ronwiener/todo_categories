@@ -13,6 +13,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Button from "@mui/material/Button";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import "../Styles.css";
 
 const MiscList = ({
   miscs,
@@ -47,7 +48,16 @@ const MiscList = ({
           const labelId = `list-todo-${misc}`;
 
           return (
-            <ListItem key={`todo-${UniqKey++}`} role={undefined} dense button>
+            <ListItem
+              key={`todo-${UniqKey++}`}
+              role={undefined}
+              dense
+              button
+              style={{
+                backgroundColor: "#e0fbfc",
+                boxShadow: "0 0 1px black",
+              }}
+            >
               <ListItemIcon>
                 <Checkbox
                   sx={{
@@ -74,6 +84,7 @@ const MiscList = ({
                     id={labelId}
                     className="form__list-text"
                     primary={`${misc.text}`}
+                    primaryTypographyProps={{ fontSize: "19px" }}
                     style={{
                       color: "black",
                       opacity: misc.isCompleted ? "0.35" : undefined,
@@ -82,7 +93,7 @@ const MiscList = ({
                   <ListItemIcon>
                     <IconButton
                       className="editButton"
-                      style={{ color: "#006600", marginRight: "5px" }}
+                      style={{ color: "#00897b", marginRight: "5px" }}
                       edge="end"
                       aria-label="edit"
                       onClick={() => editMisc(inx)}
@@ -110,8 +121,8 @@ const MiscList = ({
                     <IconButton
                       onClick={() => saveMisc(inx)}
                       edge="end"
-                      style={{ color: "#006600" }}
-                      aria-label="delete"
+                      style={{ color: "#00897b" }}
+                      aria-label="save"
                     >
                       <CheckCircleIcon />
                     </IconButton>

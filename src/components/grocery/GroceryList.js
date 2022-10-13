@@ -13,6 +13,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import "../Styles.css";
 
 const GroceryList = ({
   groceries,
@@ -48,7 +49,16 @@ const GroceryList = ({
           const labelId = `list-todo-${grocery}`;
 
           return (
-            <ListItem key={`todo-${UniqKey++}`} role={undefined} dense button>
+            <ListItem
+              key={`todo-${UniqKey++}`}
+              role={undefined}
+              dense
+              button
+              style={{
+                backgroundColor: "#e0fbfc",
+                boxShadow: "0 0 1px black",
+              }}
+            >
               <ListItemIcon>
                 <Checkbox
                   sx={{
@@ -75,6 +85,7 @@ const GroceryList = ({
                     id={labelId}
                     className="form__list-text"
                     primary={`${grocery.text}`}
+                    primaryTypographyProps={{ fontSize: "19px" }}
                     style={{
                       color: "black",
                       opacity: grocery.isCompleted ? "0.35" : undefined,
@@ -83,7 +94,7 @@ const GroceryList = ({
                   <ListItemIcon>
                     <IconButton
                       className="editButton"
-                      style={{ color: "#006600", marginRight: "5px" }}
+                      style={{ color: "#00897b", marginRight: "5px" }}
                       edge="end"
                       aria-label="edit"
                       onClick={() => editGrocery(inx)}
@@ -111,8 +122,8 @@ const GroceryList = ({
                     <IconButton
                       onClick={() => saveGrocery(inx)}
                       edge="end"
-                      style={{ color: "#006600" }}
-                      aria-label="delete"
+                      style={{ color: "#00897b" }}
+                      aria-label="save"
                     >
                       <CheckCircleIcon />
                     </IconButton>
